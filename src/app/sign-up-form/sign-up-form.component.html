@@ -1,0 +1,26 @@
+<h2>_ Welcome Slayer _</h2>
+
+<form [formGroup]="signUpForm" (ngSubmit)="ripAndTear()" *ngIf="!submitted">
+    <label>Nick name</label><br/>
+    <label *ngIf="signUpForm.controls['nickName'].invalid && attemptedSubmission">
+        Nick name is a required field
+    </label>
+    <input type="text" formControlName="nickName" required/><br/>
+    
+    <label>Age in battle</label><br/>
+    <input type="number" formControlName="ageInBattle" /><br/>
+
+    <label>Weapon of choice</label><br/>
+    <select formControlName="weaponOfChoice">
+        <option value="0">Shot gun</option>
+        <option value="1">Double Shot gun</option>
+    </select>
+    <br/>
+
+    <br/>
+    <input type="submit" value="Rip & Tear!" />
+</form>
+
+<div *ngIf="submitted">
+    [ MOVE! RIP THROUGH! ]
+</div>

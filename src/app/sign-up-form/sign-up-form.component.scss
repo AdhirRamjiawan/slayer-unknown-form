@@ -1,0 +1,25 @@
+input {
+    background-color: #af1010;
+    color: white;
+    font-size: large;
+    border-radius: 5px;
+}
+
+select {
+    background-color: #af1010;
+    color: white;
+    font-size: large;
+    border-radius: 5px;
+}
+
+select > option {
+    background-color: #af1010;
+    font-size: large;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
