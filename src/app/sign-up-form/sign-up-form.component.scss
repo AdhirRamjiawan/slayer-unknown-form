@@ -23,3 +23,29 @@ input[type="submit"] {
     padding: 10px;
     border-radius: 5px;
 }
+
+.military-card {
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 400px;
+    background-color: rgba($color: #237723, $alpha: 0.75);
+    color: darkorange;
+    border-radius: 15px;
+    border: 3px solid darkorange;
+    transform: rotate3d(1, 1, 1, -4.5deg);
+    
+    padding: 5px;
+
+    > table {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    > table tr td {
+        padding: 5px;
+    }
+
+    .avatar {
+        width: 100px;
+    }
+}

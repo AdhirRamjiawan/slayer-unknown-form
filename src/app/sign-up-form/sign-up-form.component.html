@@ -12,8 +12,9 @@
 
     <label>Weapon of choice</label><br/>
     <select formControlName="weaponOfChoice">
-        <option value="0">Shot gun</option>
-        <option value="1">Double Shot gun</option>
+        <option value="0">--Please select--</option>
+        <option value="1">Shot gun</option>
+        <option value="2">Super Shot gun</option>
     </select>
     <br/>
 
@@ -22,5 +23,30 @@
 </form>
 
 <div *ngIf="submitted">
-    [ MOVE! RIP THROUGH! ]
+    [ MOVE! RIP & TEAR! ]
+
+    <div class="military-card">
+        <table>
+            <tr>
+                <td rowspan="4">
+                    <img class="avatar" src="assets/avatar.png"/>
+                </td>
+                <td width="80%"></td>
+            </tr>
+            <tr>
+                <td>Name: {{ signUpForm.controls['nickName'].value }}</td>
+            </tr>
+            <tr>
+                <td>Age: {{ signUpForm.controls['ageInBattle'].value }}</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Weapon: {{ 
+                        (signUpForm.controls['weaponOfChoice'].value === 1) ? "Shotgun" : 
+                        (signUpForm.controls['weaponOfChoice'].value === 2) ? "Super shotgun": "?"
+                    }}
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>

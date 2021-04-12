@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
+import { SignUpFormWeaponValidator } from './sign-up-form-weapon-validator';
 
 @Component({
   selector: 'app-sign-up-form',
@@ -14,7 +15,7 @@ export class SignUpFormComponent implements OnInit {
   signUpForm = this.fb.group({
     nickName: ['', Validators.required],
     ageInBattle: [0, Validators.required],
-    weaponOfChoice: [0, Validators.required]
+    weaponOfChoice: [0, SignUpFormWeaponValidator]
   });
 
   constructor(public fb: FormBuilder) { 
